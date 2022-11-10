@@ -23,7 +23,7 @@ public class getAmmo : MonoBehaviour
     }
 
     if (hitInfo.collider.gameObject.name == "Target") {
-        print (hitInfo.collider.gameObject.parent.name);
+        print (hitInfo.collider.gameObject.transform.parent.name);
 
     } 
     
