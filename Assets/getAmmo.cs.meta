@@ -3,7 +3,10 @@ guid: 6f847fa90668390478841302c2570dab
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - AmmoBox: {instanceID: 0}
+  - g: {instanceID: 0}
+  - load: {fileID: 8300000, guid: 1b81e42a5e5f34c489d540ccaec0ca2a, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
