@@ -10,6 +10,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
     //[RequireComponent(typeof (AudioSource))]
     public class FirstPersonController : MonoBehaviour
     {
+        [SerializeField] public AudioSource movement; //movement sound variable
+        [SerializeField] public AudioClip walk; //walking sound clip
         [SerializeField] private bool m_IsWalking;
         [SerializeField] private float m_WalkSpeed;
         [SerializeField] private float m_RunSpeed;
@@ -167,11 +169,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // pick & play a random footstep sound from the array,
             // excluding sound at index 0
             //int n = Random.Range(1, m_FootstepSounds.Length);
-            //m_AudioSource.clip = m_FootstepSounds[n];
-            //m_AudioSource.PlayOneShot(m_AudioSource.clip);
-            // move picked sound to index 0 so it's not picked next time
-            //m_FootstepSounds[n] = m_FootstepSounds[0];
-            //m_FootstepSounds[0] = m_AudioSource.clip;
+            movement = GetComponent<AudioSource>(); //assign movement to an AudioSource
+            movement.clip = walk; //set movement variable to clip sound effect
+            movement.Play(); //play movement variable (as walking sound effect)
+            /*m_AudioSource.clip = m_FootstepSounds[n];
+            m_AudioSource.PlayOneShot(m_AudioSource.clip);
+            move picked sound to index 0 so it's not picked next time
+            m_FootstepSounds[n] = m_FootstepSounds[0];
+            m_FootstepSounds[0] = m_AudioSource.clip;*/
         }
 
 
