@@ -1,7 +1,7 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class RedDotCrosshair : MonoBehaviour 
+public class CrossHair : MonoBehaviour 
 {
 	void Start () 
 	{
